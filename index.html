@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div id="header-image">
+  <img src="images/john.jpg" />
+</div>
+
+<div id="info">
+  <h3>Garrison Auction Service</h3>
+  <p>
+    820 N. 1st Avenue<br/>
+    Winterset, IA 50273<br/>
+    <a href="tel:+15154621012">(515) 462-1012</a>
+  </p>
+  <p>25 years of qualification and experiences in all types of auctions</p>
+  <p>Antiques &bull; Farm &bull; Household &bull; Any Type Business Liquidation or Closeout</p>
+  <p>We feature on site auctions and a new climate controlled building for the inside auctions at no cost to the customers and pickup service is available.</p>
+  <ul>
+    <li>Commission rates to suit the product we are selling</li>
+    <li>Prompt settlement after auction</li>
+    <li>We handle all checks</li>
+  </ul>
+</div>
+
+{% for auction in site.data.auctions %}
+  {% include auction.html %}
+{% endfor %}

@@ -1,0 +1,16 @@
+<div>
+  <h4>{{ auction.title }}</h4>
+  <p>{{ auction.date| date: "%B %e, %Y &bull; %l:%M %p %Z" }}</p> 
+  {% for section in auction.sections %}
+  <p>
+    <h5>{{ section.name }}</h5>
+    {{ section.text }}
+  </p>
+  {% endfor %}
+  <div class="auction-images">
+  {% for image in auction.images %}
+  <img src="{{ image.location }}" /><br/>
+  {% endfor %}
+  </div>
+  <p>{{ auction.final_comments }}</p>
+</div>
