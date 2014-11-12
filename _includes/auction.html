@@ -1,9 +1,14 @@
-<div>
-  <h4>{{ auction.title }}</h4>
-  <p>{{ auction.date| date: "%B %e, %Y &bull; %l:%M %p %Z" }}</p> 
+ <div class="auction">
+  <div class="auction-header">
+    <h3>{{ auction.title }}</h3>
+    <p>{{ auction.date| date: "%B %e, %Y &bull; %l:%M %p %Z" }}</p> 
+    <p>{{ auction.location }}</p> 
+    <p>{{ auction.owner }}</p> 
+    <p><q>{{ auction.owner_comments }}</q></p> 
+  </div>
   {% for section in auction.sections %}
   <p>
-    <h5>{{ section.name }}</h5>
+    <h4>{{ section.name }}:</h4>
     {{ section.text }}
   </p>
   {% endfor %}

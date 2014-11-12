@@ -1,0 +1,32 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+$garrison-grey: #666666;
+
+body {
+    background-color: $garrison-grey;
+    font-family: verdana;
+}
+
+#header-image img {
+    max-width: 100%;
+}
+
+#info {
+    color: white;
+}
+#info a {
+    color: white;
+}
+
+.auction {
+    background-color: white;
+    border-radius: 9px;
+    padding: .25em 1em;
+    margin-bottom: 1em;
+}
+
+.auction-header {
+    text-align: center;
+}
